@@ -1,4 +1,4 @@
-import React, {ChangeEvent, Dispatch, SetStateAction, useEffect, useState} from 'react';
+import React, {ChangeEvent, Dispatch, SetStateAction, useEffect, useState} from "react";
 import {settingsType} from "./CounterWrap";
 
 type propsType = {

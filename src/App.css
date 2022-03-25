@@ -17,8 +17,10 @@ body {
 
 .counterAppWrap {
     display: flex;
-    flex-direction: row;
+    /*flex-direction: row;*/
     justify-content: center;
+    /*align-items: center;*/
+    flex-wrap: wrap;
     color: #504a27;
 }
 
