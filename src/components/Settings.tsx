@@ -29,7 +29,7 @@ const Settings: React.FC<propsType> = (
 
     return (
         <div className={'Wrap'}>
-            <div className={'inputSettings'}>
+            <div className={'inputSettings displayWrap'}>
                 <div>
                     <span>Start Value</span>
                     <input className={'inputValue'}
@@ -45,7 +45,7 @@ const Settings: React.FC<propsType> = (
                            type="number"/>
                 </div>
             </div>
-            <div className={'settingsBtnWrap'}>
+            <div className={'settingsBtnWrap displayWrap'}>
                 <button className={'btn'}
                         onClick={setBtnHandler}>set
                 </button>
