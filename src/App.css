@@ -1,38 +1,61 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    background-color: #a2cbd5;
+}
+
 .App {
-  text-align: center;
+    text-align: center;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.redText {
+    color: red;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.counterAppWrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: #504a27;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.Wrap {
+    width: 250px;
+    border: 1px solid #998d4b;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.displayWrap {
+    border: 1px solid #998d4b;
+    border-radius: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.counterButtonsWrap {
+    border: 1px solid #998d4b;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding: 5px;
+}
+
+.btn {
+    background-color: #998d4b;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px;
+    color: bisque;
+}
+
+.btn:disabled{
+    background-color: gray;
+}
+
+.btn:active{
+    background-color: #504a27;
 }
