@@ -18,6 +18,7 @@ const CounterWrap = () => {
     const incrementCounter = () => {
         counter < settings.MAX_VALUE &&
         setCounter(counter + 1)
+        localStorage.setItem('counter', (counter + 1).toString())
     }
 
     const [error, setError] = useState(null as null | string)
@@ -29,6 +30,10 @@ const CounterWrap = () => {
                 MAX_VALUE: maxValue
             })
             setCounter(settings.START_VALUE)
+            localStorage.setItem('settings', JSON.stringify({
+                START_VALUE: startValue,
+                MAX_VALUE: maxValue
+            }))
         } else {
             setError('incorrect start or max Value')
         }
@@ -37,21 +42,25 @@ const CounterWrap = () => {
 
     const resetCounter = () => {
         setCounter(settings.START_VALUE)
+        localStorage.setItem('counter', settings.START_VALUE.toString())
     }
 
     useEffect(() => {
         const LS = localStorage.getItem('settings')
         if (LS) {
-            const parsedLS = JSON.parse(LS)
-            setSettings(parsedLS)
-            setCounter(parsedLS.START_VALUE)
+            // const parsedLS = JSON.parse(LS)
+            setSettings(JSON.parse(LS))
+        }
+        const LScounter = localStorage.getItem('counter')
+        if (LScounter) {
+            setCounter(+LScounter)
         }
     }, [])
 
-    useEffect(() => {
-        // setCounter(settings.START_VALUE)
-        localStorage.setItem('settings', JSON.stringify(settings))
-    }, [settings])
+    // useEffect(() => {
+    //     // setCounter(settings.START_VALUE)
+    //     localStorage.setItem('settings', JSON.stringify(settings))
+    // }, [settings])
 
 
     return (

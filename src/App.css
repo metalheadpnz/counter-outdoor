@@ -52,10 +52,19 @@ body {
     color: bisque;
 }
 
-.btn:disabled{
+.btn:disabled {
     background-color: gray;
 }
 
-.btn:active{
+.btn:active {
     background-color: #504a27;
+}
+.inputValue {
+    width: 50px;
+    background-color: #b2e0ea;
+    color: #998d4b;
+    outline: none;
+    border: none;
+    padding: 15px;
+
 }

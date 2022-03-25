@@ -32,19 +32,23 @@ const Settings: React.FC<propsType> = (
             <div className={'inputSettings'}>
                 <div>
                     <span>Start Value</span>
-                    <input value={settings.START_VALUE.toString()}
+                    <input className={'inputValue'}
+                           value={settings.START_VALUE.toString()}
                            onChange={onStartValueInputChange}
                            type="number"/>
                 </div>
                 <div>
                     <span>Max Value</span>
-                    <input value={settings.MAX_VALUE.toString()}
+                    <input className={'inputValue'}
+                           value={settings.MAX_VALUE.toString()}
                            onChange={onMaxValueInputChange}
                            type="number"/>
                 </div>
             </div>
             <div className={'settingsBtnWrap'}>
-                <button onClick={setBtnHandler}>set</button>
+                <button className={'btn'}
+                        onClick={setBtnHandler}>set
+                </button>
             </div>
             <div className={"errorField"}>
                 {error}
